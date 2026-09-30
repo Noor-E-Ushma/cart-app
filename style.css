@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    min-height: 100vh;
+    background-color: rgb(193, 196, 199);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(7, 7, 48);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0px 15px; */
+}
+.navbar i {
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+.navbar h2 {
+    margin: 10px;
+    position: absolute;
+    left: 25px;
+}
+#count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#cart-count {
+    margin: 5px;
+    background-color: red;
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+.product-section {
+    padding: 40px;
+}
+.product-section h2 {
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+.product-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.product-card h3 {
+    text-transform: capitalize;
+    margin: 10px;
+}
+.product-card p {
+    font-size: 25px;
+    color: rgb(7, 7, 48);
+    margin-bottom: 15px;
+}
+.product-card button {
+    width: 120px;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(24, 24, 89);
+    cursor: pointer;
+}
+.product-card button:hover {
+    background-color: rgb(7, 7, 48);
+}
+.shopping-cart {
+    max-width: 1200px;
+    margin: 10px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 70px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.1);
+}
+.shopping-cart > p,
+.shopping-cart > h4 {
+    text-align: center;
+    color: #666;
+    padding: 10px;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+.cart-item:last-child {
+    border-bottom: none;
+}
+.cart-item h3 {
+    flex: 1;
+    text-transform: capitalize;
+}
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(7, 7, 48);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+}
+.quantity span {
+    min-width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.remove-btn {
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.remove-btn:hover {
+    background-color: #b02a37;
+}
+body > div:last-of-type {
+    max-width: 1200px;
+    margin: 20px auto 40px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.1);
+}
+body > div:last-of-type p,
+body > div:last-of-type h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+body > div:last-of-type h3 {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    font-size: 20px;
+}
+#Checkout {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(7, 7, 48);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+#Checkout:hover {
+    background-color: rgb(30, 30, 90);
+}
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 15px;
+    }
+    .navbar h2 {
+        left: 50px;
+        font-size: 18px;
+    }
+    .product-section {
+        padding: 30px 15px;
+    }
+    .shopping-cart {
+        margin: 10px 15px;
+    }
+    body > div:last-of-type {
+        margin: 20px 15px;
+    }
+    .cart-item {
+        flex-wrap: wrap;
+    }
+    .cart-item h3 {
+        width: 100%;
+        flex: none;
+    }
+}
